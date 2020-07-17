@@ -73,18 +73,17 @@ func Test3(T *testing.T) {
 	f1()
 }
 
-
 type Invoker interface {
 	Call(interface{})
 }
 
 type Struct struct {
-
 }
 
-func(s *Struct) Call(p interface{}){
-	fmt.Println("from",p)
+func (s *Struct) Call(p interface{}) {
+	fmt.Println("from", p)
 }
+
 //函数接口实现
 /**
 此处延展java中多态思想可以定义一个接口多个结构体实现，得到不同的结果
@@ -94,8 +93,55 @@ func(s *Struct) Call(p interface{}){
 可以参考http中savehttp代码
 此处不多赘述
 
- */
+*/
 func Test4(T *testing.T) {
-	var i Invoker =  new(Struct)
+	var i Invoker = new(Struct)
 	i.Call("call!!!!!!!")
+}
+
+//闭包
+/**
+闭包指的是引用了自由变量的函数，被引用的自由变量和函数一同存在，即使已经离开了
+自由变量的环境也不会被释放或者删除，在闭包中可以继续使用这个自由变量
+*/
+
+func closeBag(value int) func() int {
+	return func() int {
+		value++
+		return value
+	}
+}
+
+func Test5(T *testing.T) {
+	bag := closeBag(1)
+	fmt.Println("run 1 bag ~~~", bag())
+	fmt.Println("run 2 bag ~~~", bag())
+	fmt.Println("run 3 bag ~~~", bag())
+	fmt.Println("run 4 bag ~~~", bag())
+	f := closeBag(10)
+	fmt.Println("run +10 bag ~~~", f())
+
+}
+
+//可变参数函数
+func canchangeFunc(str string, a ...interface{}) {
+	fmt.Println("this is string    key !!", str)
+	for _, value := range a {
+		//可以获取类型
+		switch value.(type) {
+		default:
+			fmt.Println("this is interface key !!", value)
+		}
+	}
+}
+
+func Test6(T *testing.T) {
+	canchangeFunc("super", "hero", "jim", 4)
+}
+
+//延迟语句defer,会按后进先出的顺序执行
+func Test7(T *testing.T) {
+	defer fmt.Println("first")
+	defer fmt.Println("second")
+	defer fmt.Println("third")
 }
