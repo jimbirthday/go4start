@@ -76,7 +76,7 @@ GOTOFFF:
 
 }
 
-//使用标签跳出循环
+//使用标签跳出循环~
 func Test4(T *testing.T) {
 	list1 := list.New()
 	var list2 list.List
