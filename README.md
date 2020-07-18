@@ -8,3 +8,7 @@
 - 流程控制（swtich，if,goto,标签）样例
 - string样例
 - 结构体（struct）样例 
+- 并发（goroutine）样例
+- 并发（RPC）样例
+- 接口（interface）样例
+- 结构体（struct）样例
