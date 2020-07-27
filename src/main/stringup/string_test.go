@@ -65,3 +65,46 @@ func Test2(T *testing.T) {
 	fmt.Println(CD)
 	fmt.Println(DE)
 }
+
+func Test3(T *testing.T) {
+	i2 := []byte("this is jim")
+	i := make([]byte, len(i2))
+	strncpy(i, i2, len(i))
+	println(string(i))
+}
+
+func strncpy(dist []byte, src []byte, size_t int) {
+	for i := 0; i < size_t; i++ {
+		dist[i] = src[i]
+	}
+}
+
+func add(z int) {
+	println("z ----", z)
+	z += 200
+}
+func Derfer(x, y int) (z int) {
+	defer func() {
+		println("derfer", z)
+		z += 100
+	}()
+	z = x + y
+	add(z)
+	return z
+}
+func Test4(T *testing.T) {
+	derfer1 := Derfer(1, 1)
+	println("main  ---", derfer1)
+}
+func Test5(T *testing.T) {
+	i := []byte("this is jim")
+	i2 := make([]byte, len(i))
+	strncpy1(i2, i, len(i))
+	println(string(i2))
+}
+func strncpy1(l1 []byte, l2 []byte, size int) {
+	for i := 0; i < size; i++ {
+		l1[i] = l2[i]
+	}
+
+}
