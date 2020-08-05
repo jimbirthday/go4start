@@ -43,26 +43,27 @@ func (a *abc) set1(value int) {
 
 func (a abc) set(value int) {
 	fmt.Println("````````````")
+	fmt.Println(&a)
+	fmt.Println(a)
 	a2 := &a
 	fmt.Println(&a2)
-	fmt.Println(a)
 
 	a.A = value
 	fmt.Println(&a)
 	fmt.Println(a)
-
+	fmt.Println(a2)
 	fmt.Println("````````````")
 
 }
 func Test2(T *testing.T) {
 	a := new(abc)
-	fmt.Println(&a)
-	fmt.Println(*a)
-	fmt.Println(a)
+	//fmt.Println(&a)
+	//fmt.Println(*a)
+	//fmt.Println(a)
 
 	a.set(1)
-	fmt.Println(&a)
-	fmt.Println(*a)
+	//fmt.Println(&a)
+	//fmt.Println(*a)
 	fmt.Println(a)
 
 }

@@ -93,6 +93,7 @@ func Derfer(x, y int) (z int) {
 	return z
 }
 func Test4(T *testing.T) {
+
 	derfer1 := Derfer(1, 1)
 	println("main  ---", derfer1)
 }
@@ -106,5 +107,14 @@ func strncpy1(l1 []byte, l2 []byte, size int) {
 	for i := 0; i < size; i++ {
 		l1[i] = l2[i]
 	}
+
+}
+
+func Test6(T *testing.T) {
+	var i = 1
+	j := &i
+	println(j)
+	*j = 2
+	println(i)
 
 }
