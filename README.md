@@ -13,4 +13,3 @@
 - 接口（interface）样例
 - 结构体（struct）样例
 
-11
