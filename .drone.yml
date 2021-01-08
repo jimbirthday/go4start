@@ -9,7 +9,7 @@ steps:
 - name: test2
   image: golang:1.11
   commands:
-  - go get
+  - go env
 
 ---
 kind: pipeline
@@ -19,7 +19,7 @@ steps:
 - name: test3
   image: golang:1.10
   commands:
-  - go get
+  - go env
   depends_on:
   - test1
   - test2
