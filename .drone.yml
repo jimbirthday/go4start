@@ -1,16 +1,20 @@
 kind: pipeline
-type: docker
-name: default
-   
+name: go-1-11
+
 steps:
 - name: test
-  image: alpine
+  image: golang:1.11
   commands:
-  - echo hello
-  - echo world
-  - export A=a
+  - go get
+  - go test
 
-  
-  
-  
+---
+kind: pipeline
+name: go-1-10
 
+steps:
+- name: test
+  image: golang:1.10
+  commands:
+  - go get
+  - go test
