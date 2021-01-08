@@ -20,6 +20,4 @@ steps:
   image: golang:1.10
   commands:
   - go env
-  depends_on:
-  - test1
-  - test2
+
