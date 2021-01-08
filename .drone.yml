@@ -2,19 +2,24 @@ kind: pipeline
 name: go-1-11
 
 steps:
-- name: test
+- name: test1
+  image: golang:1.11
+  commands:
+  - go env
+- name: test2
   image: golang:1.11
   commands:
   - go get
-  - go test
 
 ---
 kind: pipeline
 name: go-1-10
 
 steps:
-- name: test
+- name: test3
   image: golang:1.10
   commands:
   - go get
-  - go test
+  depends_on:
+  - test1
+  - test2
