@@ -12,4 +12,5 @@
 - 并发（RPC）样例1
 - 接口（interface）样例 
 - 结构体（struct）样例
+- protobuf（rpc+grpc）样例
  
