@@ -13,3 +13,23 @@
 - 接口（interface）样例 
 - 结构体（struct）样例
 - protobuf（rpc+grpc）样例
+
+
+
+- gin-test 
+
+参与的issue
+
+```text
+404页面不需要鉴权中间件的问题
+
+https://github.com/gin-gonic/gin/issues/2813
+
+```
+
+
+```text
+绑定结构体错误自定义响应结构体问题
+
+https://github.com/gin-gonic/gin/issues/2811
+```
