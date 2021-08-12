@@ -5,6 +5,7 @@ go 1.16
 require (
 	github.com/buildkite/yaml v2.1.0+incompatible
 	github.com/gin-gonic/gin v1.7.3 // indirect
+	github.com/go-playground/assert/v2 v2.0.1 // indirect
 	github.com/go-playground/validator/v10 v10.8.0 // indirect
 	github.com/json-iterator/go v1.1.11 // indirect
 	github.com/mattn/go-isatty v0.0.13 // indirect

@@ -1,8 +1,5 @@
 package main
 
-// 解决gin 绑定结构体响应结构问题
-// 转换错误类型,自定义响应体结构
-
 //
 //import (
 //	"errors"
@@ -13,6 +10,10 @@ package main
 //	"net/http"
 //)
 //
+
+// 解决gin 绑定结构体响应结构问题
+// 转换错误类型,自定义响应体结构
+
 //type User struct {
 //	Email string `json:"email" binding:"required,bookabledate"`
 //	Name  string `json:"name" binding:"required"`
