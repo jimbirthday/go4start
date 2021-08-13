@@ -1,5 +1,6 @@
 package main
 
+//https://github.com/gin-gonic/gin/issues/2817
 //func main() {
 //	router := gin.Default()
 //	routes := router.Group("/servicename")

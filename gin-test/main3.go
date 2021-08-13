@@ -6,6 +6,7 @@ import (
 	"net/http"
 )
 
+//解决验证器关闭后,想再次开启的问题
 type User struct {
 	Email string `json:"email" form:"e-mail" binding:"required"`
 	Name  string `json:"name" binding:"required"`

@@ -1,7 +1,7 @@
 package main
 
 // 解决 404页面不需要鉴权中间件的问题
-// 增加分组
+// 方案 增加分组
 //func main() {
 //	e := gin.Default()
 //
