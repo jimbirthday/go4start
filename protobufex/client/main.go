@@ -20,7 +20,6 @@ func main() {
 		fmt.Println("Dial err ", err)
 		return
 	}
-
 	client := pro.NewOrderServiceClient(dial)
 	request := &pro.OrderRequest{
 		OrderId:   "201907300001",

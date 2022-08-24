@@ -44,3 +44,11 @@ func TestCC1(T *testing.T) {
 
 	time.Sleep(2 * time.Second)
 }
+
+func TestCC2(T *testing.T) {
+	ctx := context.Background()
+	ctxx, can := context.WithTimeout(ctx, 2*time.Second)
+	time.Sleep(3 * time.Second)
+	go A(ctxx)
+	can()
+}
