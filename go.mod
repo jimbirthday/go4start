@@ -5,7 +5,7 @@ go 1.18
 require (
 	github.com/gin-gonic/gin v1.7.3
 	github.com/go-playground/assert/v2 v2.0.1
-	golang.org/x/crypto v0.0.0-20210711020723-a769d52b0f97
+	golang.org/x/crypto v0.1.0
 	google.golang.org/grpc v1.38.0
 	google.golang.org/protobuf v1.27.1
 )
@@ -23,9 +23,9 @@ require (
 	github.com/modern-go/reflect2 v1.0.1 // indirect
 	github.com/stretchr/testify v1.7.0 // indirect
 	github.com/ugorji/go/codec v1.2.6 // indirect
-	golang.org/x/net v0.0.0-20210614182718-04defd469f4e // indirect
-	golang.org/x/sys v0.0.0-20210630005230-0f9fa26af87c // indirect
-	golang.org/x/text v0.3.6 // indirect
+	golang.org/x/net v0.1.0 // indirect
+	golang.org/x/sys v0.1.0 // indirect
+	golang.org/x/text v0.4.0 // indirect
 	google.golang.org/genproto v0.0.0-20210614182748-5b3b54cad159 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
