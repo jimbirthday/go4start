@@ -1,0 +1,24 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+/dbm.bat
+/dbm.sh
+/model.yml
+/install.html
+*.test
+*.bak
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+bin/
+.idea
+.vscode
+
+# Dependency directories (remove the comment below to include it)
+# vendor/
+__debug_bin

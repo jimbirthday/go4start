@@ -2,6 +2,7 @@ package httpup
 
 import (
 	"testing"
+	"time"
 )
 
 func Test23(t *testing.T) {
@@ -16,7 +17,7 @@ func Test23(t *testing.T) {
 	f <- 2
 }
 func Test33(t *testing.T) {
-	f := make(chan int, 2)
+	f := make(chan int)
 	go func() {
 		f <- 1
 		f <- 2
@@ -35,14 +36,14 @@ func Test34(t *testing.T) {
 	go func() {
 		f <- 1
 		f <- 2
+		close(f)
 	}()
-	//time.Sleep(time.Second * 5)
-	close(f)
-	close(f)
+	time.Sleep(time.Second * 2)
+	f <- 2
+	println(<-f)
+	println(<-f)
+	println(<-f)
 
-	println(<-f)
-	println(<-f)
-	println(<-f)
 }
 func Test35(t *testing.T) {
 	for i := 0; i < 5; i++ {

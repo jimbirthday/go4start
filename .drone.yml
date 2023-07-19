@@ -1,0 +1,23 @@
+kind: pipeline
+name: go-1-111
+
+steps:
+- name: test1
+  image: golang:1.11
+  commands:
+  - go env
+- name: test2
+  image: golang:1.11
+  commands:
+  - go env
+
+---
+kind: pipeline
+name: go-1-10
+
+steps:
+- name: test3
+  image: golang:1.10
+  commands:
+  - go env
+

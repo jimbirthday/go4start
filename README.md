@@ -10,17 +10,26 @@
 - 结构体（struct）样例 
 - 并发（goroutine）样例
 - 并发（RPC）样例1
-- 接口（interface）样例
+- 接口（interface）样例 
 - 结构体（struct）样例
-- 111111111111121111
-111
-1111
-21
-111
-1
+- protobuf（rpc+grpc）样例
 
-1
-11111
-1
-1222
 
+
+- gin-test 
+
+参与的issue
+
+```text
+404页面不需要鉴权中间件的问题
+
+https://github.com/gin-gonic/gin/issues/2813
+
+```
+
+
+```text
+绑定结构体错误自定义响应结构体问题
+
+https://github.com/gin-gonic/gin/issues/2811
+```
